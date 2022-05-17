@@ -20,7 +20,7 @@ class ContactController extends Controller {
     }
 
     public function allData() {
-        //dd(Contact::all());
-        return view('messages', ['data' => Contact::all()]);
+        $contact = new Contact();
+        return view('messages', ['data' => $contact->all()]);
     }
 }
