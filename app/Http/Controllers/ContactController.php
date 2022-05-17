@@ -23,4 +23,11 @@ class ContactController extends Controller {
         $contact = new Contact();
         return view('messages', ['data' => $contact->all()]);
     }
+
+    public function showOneMessage($id) {
+        $contact = new Contact();
+        return view('message', ['data' => $contact->find($id)]);
+    }
+
+
 }
