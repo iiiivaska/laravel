@@ -22,3 +22,12 @@ Route::get('/contact/all/{id}', [ContactController::class, 'showOneMessage'])->n
 Route::get('/contact/all/{id}/update', [ContactController::class, 'updateMessage'])->name('contact-update');
 Route::post('/contact/all/{id}/update', [ContactController::class, 'updateMessageSubmit'])->name('contact-update-submit');
 Route::get('/contact/all/{id}/delete', [ContactController::class, 'deleteMessage'])->name('contact-delete');
+Route::get('/register', function () {return view('register');})->name('register');
+Route::get('/logOut', [ContactController::class, 'logOut'])->name('logOut');
+
+Auth::routes();
+
+Route::get('/', function () {
+    return view('home');
+})->name('home');
+

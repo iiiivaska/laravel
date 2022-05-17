@@ -3,7 +3,7 @@
 @section('title-block')Все сообщения@endsection
 
 @section('content')
-    <h1>Главная страница</h1>
+    <h1>Сообщения</h1>
     @foreach($data as $element)
         <div class="alert alert-info">
             <h3>{{ $element->subject }}</h3>

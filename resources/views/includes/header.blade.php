@@ -7,5 +7,13 @@
         <a class="py-2 d-none d-md-inline-block" href="{{ route('about') }}">О нас</a>
         <a class="py-2 d-none d-md-inline-block" href="{{ route('contact') }}">Контакты</a>
         <a class="py-2 d-none d-md-inline-block" href="{{ route('contact-data') }}">Сообщения</a>
+            @if(Auth::check())
+                <a class="py-2 d-none d-md-inline-block" href="{{ route('logOut') }}">
+                Выход
+            @else
+                        <a class="py-2 d-none d-md-inline-block" href="{{ route('register') }}">
+                Вход/Регистрация
+            @endif
+        </a>
     </nav>
 </header>
